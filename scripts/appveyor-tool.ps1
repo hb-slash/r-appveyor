@@ -137,10 +137,6 @@ Function Bootstrap {
 
   Progress "Bootstrap: Start"
 
-  pwd
-  ls 
-  ls *
-
   Progress "Adding GnuWin32 tools to PATH"
   $env:PATH = "C:\Program Files (x86)\Git\bin;" + $env:PATH
 
@@ -149,17 +145,9 @@ Function Bootstrap {
   tzutil /s "GMT Standard Time"
   tzutil /g
 
-  pwd
-  ls 
-  ls *
-
   InstallR
 
-  pwd
-  ls 
-  ls *
-  
-  if ( Test-Path "/**/src" ) {
+  if ( Test-Path "src" ) {
     InstallRtools
   }
   Else {
