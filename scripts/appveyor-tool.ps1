@@ -147,7 +147,11 @@ Function Bootstrap {
 
   InstallR
 
-  if ( Test-Path "\**\src" ) {
+  pwd
+  ls -la
+  ls -la */
+  
+  if ( Test-Path "/**/src" ) {
     InstallRtools
   }
   Else {
